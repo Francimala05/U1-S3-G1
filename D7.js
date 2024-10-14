@@ -233,9 +233,11 @@ console.log("Il film piu' vecchio è",oldestMovie.Title," pubblicato nel",oldest
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 
+function Numfilm(movies){
+  return movies.length
+}
 
-
-
+console.log("il numero totale dei film è", movies.length)
 
 
 /* ESERCIZIO 11 (map)
@@ -263,11 +265,10 @@ console.log(filmRecenti);
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 
-
 let sommaAnni = movies.reduce((aggiornato,valoreCorrente) =>
-  aggiornato + valoreCorrente.Year,0
-)
-console.log(sommaAnni)
+ aggiornato + parseInt(valoreCorrente.Year),0)
+
+console.log("la somma degli anni è", sommaAnni)
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
@@ -281,7 +282,6 @@ console.log(specFilm)
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
-
 
 const specYear = movies.findIndex (elemento => elemento.Year === '2015')
 
